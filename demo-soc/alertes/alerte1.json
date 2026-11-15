@@ -1,0 +1,38 @@
+{
+  "id": "ALRT-2026-0421",
+  "type": "phishing",
+  "severity": "high",
+  "status": "open",
+  "source": "email_gateway",
+  "detection_rule": "EG-PHISH-CRED-HARVEST-042",
+  "timestamp": "2026-11-15T08:47:12Z",
+  "user": {
+    "email": "claire.moreau@example-corp.com",
+    "display_name": "Claire Moreau",
+    "department": "Finance",
+    "employee_id": "EMP-1187"
+  },
+  "ip": "203.0.113.47",
+  "sender": {
+    "email": "support@micros0ft-secure.example.net",
+    "display_name": "Microsoft 365 Support",
+    "reply_to": "no-reply@micros0ft-secure.example.net"
+  },
+  "email": {
+    "subject": "Action requise : votre mot de passe expire dans 24h",
+    "message_id": "<8f3a2c1d9e@b0rked.example.net>",
+    "attachment": null,
+    "urls": [
+      "https://micros0ft-secure.example.net/owa/verify?token=9f27ab1c"
+    ],
+    "spf": "fail",
+    "dkim": "fail",
+    "dmarc": "fail"
+  },
+  "actions_observed": [
+    "L'utilisateur a ouvert l'e-mail a 08:52:03Z",
+    "Clic sur le lien a 08:53:41Z depuis le poste FIN-PC-0142 (10.20.14.87)",
+    "Saisie de credentials sur la page de harvesting a 08:54:10Z"
+  ],
+  "description": "E-mail de phishing ciblant le service Finance : usurpation de la marque Microsoft 365 (domaine lookalike micros0ft-secure.example.net), SPF/DKIM/DMARC en echec, lien vers une page de collecte d'identifiants. L'utilisateur Claire Moreau a saisi ses identifiants depuis son poste. Compromission de compte probable."
+}

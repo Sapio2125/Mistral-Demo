@@ -1,0 +1,28 @@
+[project]
+name = "demo-soc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Acuzou", email = "alexandrecuzou@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mistralai>=3.7.0",
+    "mistralai-agents==1.1.0",
+    "mistralai-workflows>=3.19.0",
+]
+
+[project.scripts]
+demo-soc = "demo_soc:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+# Projet autonome : ne pas rejoindre le workspace du répertoire parent
+# (conflit cachetools entre mistral-vibe et mistralai-agents==1.1.0).
+[tool.mistralai.agents]
+entrypoint = "agent_soc:soc"
+
+[tool.uv.workspace]

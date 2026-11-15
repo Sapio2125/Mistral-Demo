@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "demo-web",
+  "version": "1.0.0",
+  "description": "Plugin de demonstration : serveur MCP fetch pour lire des pages web, avec une competence de resume.",
+  "license": "MIT",
+  "keywords": ["demo", "web", "fetch"],
+  "extensions": {
+    "ai.mistral.vibe": {
+      "schemaVersion": 1,
+      "displayName": "Demo Web Fetch",
+      "toolNamespace": "demoWeb"
+    }
+  }
+}
